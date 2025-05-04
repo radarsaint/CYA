@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ruleset name="ArcaniaStandard">
+  <description>Lean PSR-12 ruleset for Children of Yves: Arcania</description>
+
+  <!-- Base coding standard -->
+  <rule ref="PSR12" />
+
+  <!-- Doc comment: allow missing or incomplete blocks -->
+  <exclude name="Generic.Commenting.DocComment.Missing" />
+  <exclude name="Generic.Commenting.DocCommentTag.Missing" />
+  <exclude name="Generic.Commenting.DocCommentTagGroup.Missing" />
+  <exclude name="Generic.Commenting.DocCommentTagIndent" />
+  <exclude name="Generic.Commenting.TagComment.Missing" />
+  <exclude name="Generic.Commenting.Todo.CommentFound" />
+
+  <!-- File-level doc comment: remove all PEAR tag requirements -->
+  <exclude name="PEAR.Commenting.FileComment" />
+  <exclude name="PEAR.Commenting.FileComment.Missing" />
+  <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingPackageTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingLinkTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingVersionTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag" />
+  <exclude name="PEAR.Commenting.FileComment.MissingCommentTag" />
+  <exclude name="PEAR.Commenting.FileComment.SpacingAfterComment" />
+  <exclude name="PEAR.Commenting.InlineComment" />
+
+  <!-- Disable line-ending nitpicks -->
+  <exclude name="Generic.Files.LineEndings.Invalid" />
+
+  <!-- Optional: allow short open tags like <?= (disable if strict) -->
+  <!-- <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" /> -->
+</ruleset>
