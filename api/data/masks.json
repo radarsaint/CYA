@@ -1,0 +1,20 @@
+[
+  { "id": "mask_of_humility",     "label": "Mask of Humility" },
+  { "id": "mask_of_pretense",     "label": "Mask of Pretense" },
+  { "id": "mask_of_indifference", "label": "Mask of Indifference" },
+  { "id": "mask_of_detachment",   "label": "Mask of Detachment" },
+  { "id": "mask_of_the_lone_wolf","label": "Mask of the Lone Wolf" },
+  { "id": "mask_of_deception",    "label": "Mask of Deception" },
+  { "id": "mask_of_the_outcast",  "label": "Mask of the Outcast" },
+  { "id": "mask_of_arrogance",    "label": "Mask of Arrogance" },
+  { "id": "mask_of_the_jester",   "label": "Mask of the Jester" },
+  { "id": "mask_of_the_scholar",  "label": "Mask of the Scholar" },
+  { "id": "mask_of_the_faithful", "label": "Mask of the Faithful" },
+  { "id": "mask_of_the_gladiator","label": "Mask of the Gladiator" },
+  { "id": "mask_of_the_novelist", "label": "Mask of the Novelist" },
+  { "id": "mask_of_the_idealist", "label": "Mask of the Idealist" },
+  { "id": "mask_of_the_visionary","label": "Mask of the Visionary" },
+  { "id": "mask_of_the_pragmatist","label": "Mask of the Pragmatist" }
+]
+
+  

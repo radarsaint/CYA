@@ -1,25 +1,24 @@
-{
-    "sagas": [
-      { "id": "echoes_of_the_vanished_colony",      "label": "Echoes of the Vanished Colony" },
-      { "id": "rider_of_the_legend_trails",         "label": "Rider of the Legend Trails" },
-      { "id": "shadow_above_empire_city",           "label": "Shadow Above Empire City" },
-      { "id": "pilgrims_covenant",                  "label": "Pilgrim’s Covenant" },
-      { "id": "homesteads_promise",                 "label": "Homestead’s Promise" },
-      { "id": "trail_of_the_iron_horses",           "label": "Trail of the Iron Horses" },
-      { "id": "ember_of_the_smoky_peaks",           "label": "Ember of the Smoky Peaks" },
-      { "id": "rivers_of_discovery",                "label": "Rivers of Discovery" },
-      { "id": "sleepy_hollow_harvest",              "label": "Sleepy Hollow Harvest" },
-      { "id": "ghosts_of_the_green_mountain",       "label": "Ghosts of the Green Mountain" },
-      { "id": "siege_of_the_bastion_fires",         "label": "Siege of the Bastion Fires" },
-      { "id": "lanterns_on_the_bayou",              "label": "Lanterns on the Bayou" },
-      { "id": "frostbound_frontier",                "label": "Frostbound Frontier" },
-      { "id": "whispers_of_the_redwood_circle",     "label": "Whispers of the Redwood Circle" },
-      { "id": "daughters_of_the_valley_forge",      "label": "Daughters of the Valley Forge" },
-      { "id": "steel_and_steam_of_the_erie_road",   "label": "Steel and Steam of the Erie Road" },
-      { "id": "eclipse_over_chesapeake",            "label": "Eclipse over Chesapeake" },
-      { "id": "bells_of_libertys_dawn",             "label": "Bells of Liberty’s Dawn" },
-      { "id": "tides_of_the_gold_coast",            "label": "Tides of the Gold Coast" },
-      { "id": "reckoning_at_the_silver_pass",       "label": "Reckoning at the Silver Pass" }
-    ]
-  }
+[
+  { "id": "echoes_of_the_vanished_colony", "label": "Echoes of the Vanished Colony" },
+  { "id": "rider_of_the_legend_trails",    "label": "Rider of the Legend Trails" },
+  { "id": "shadow_above_empire_city",      "label": "Shadow Above Empire City" },
+  { "id": "pilgrims_covenant",             "label": "Pilgrim’s Covenant" },
+  { "id": "homesteads_promise",            "label": "Homestead’s Promise" },
+  { "id": "trail_of_the_iron_horses",      "label": "Trail of the Iron Horses" },
+  { "id": "ember_of_the_smoky_peaks",      "label": "Ember of the Smoky Peaks" },
+  { "id": "rivers_of_discovery",           "label": "Rivers of Discovery" },
+  { "id": "sleepy_hollow_harvest",         "label": "Sleepy Hollow Harvest" },  
+  { "id": "ghosts_of_the_green_mountain",  "label": "Ghosts of the Green Mountain" },
+  { "id": "siege_of_the_bastion_fires",    "label": "Siege of the Bastion Fires" },
+  { "id": "lanterns_on_the_bayou",         "label": "Lanterns on the Bayou" },
+  { "id": "frostbound_frontier",           "label": "Frostbound Frontier" },
+  { "id": "whispers_of_the_redwood_circle","label": "Whispers of the Redwood Circle" },
+  { "id": "daughters_of_the_valley_forge", "label": "Daughters of the Valley Forge" },
+  { "id": "steel_and_steam_of_the_erie_road","label":"Steel and Steam of the Erie Road"},
+  { "id": "eclipse_over_chesapeake",       "label": "Eclipse over Chesapeake" },
+  { "id": "bells_of_libertys_dawn",        "label": "Bells of Liberty’s Dawn" },
+  { "id": "tides_of_the_gold_coast",       "label": "Tides of the Gold Coast" },
+  { "id": "reckoning_at_the_silver_pass",  "label": "Reckoning at the Silver Pass" }
+]
+
   
