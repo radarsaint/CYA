@@ -3,128 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Children of Yves – Arcania</title>
 
-    <!-- ↓ add styles later -->
-    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+    <!-- Link your CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
-    <!-- ───────────── Header / Site‑wide Nav ───────────── -->
-    <header>
-      <h1 class="logo">Children of Yves: Arcania</h1>
+    <!-- Everything inside “wrapper” sits above the overlay -->
+    <div class="wrapper">
+      <!-- ───────────── Header / Site‑wide Nav ───────────── -->
+      <header>
+        <h1 class="logo">Children of Yves: Arcania</h1>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#signup">Sign Up</a>
+          <a href="#signin">Sign In</a>
+        </nav>
+      </header>
 
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#signup">Sign Up</a>
-        <a href="#signin">Sign In</a>
-      </nav>
-    </header>
+      <!-- ───────────── Main Content ───────────── -->
+      <main id="content">
+        <!-- Hero / elevator pitch -->
+        <section id="about" aria-labelledby="hero-title">
+          <h2 id="hero-title">
+            Forge your legend from sea to shining sea in a world of myth and magic.
+          </h2>
 
-    <!-- ───────────── Main Content ───────────── -->
-    <main id="content">
-      <!-- Hero / elevator pitch -->
-      <section id="about" aria-labelledby="hero-title">
-        <h2 id="hero-title">
-          Forge your legend from sea to shining sea in a world of myth and magic.
-        </h2>
+          <p>
+            <strong>Children of Yves: Arcania</strong> is a browser‑based RPG where
+            new‑world myth and heartfelt storytelling entwine. Shape a lineage,
+            master the waters of Fontaine Youth, search for the City of Gold,
+            discover the lost colony of Roanoke, and experience a fantasy
+            reimagining of early American history.
+          </p>
 
+          <p>
+            <a class="cta-button" href="#signup">Begin Your Journey →</a>
+          </p>
+        </section>
+
+        <!-- Sign‑up form -->
+        <section id="signup" aria-labelledby="signup-title">
+          <h2 id="signup-title">Create an Account</h2>
+          <form action="register.php" method="post" autocomplete="off">
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                aria-describedby="emailHelp"
+                required
+              />
+            </label>
+
+            <label>
+              Username
+              <input
+                type="text"
+                name="username"
+                placeholder="Choose a name…"
+                minlength="3"
+                maxlength="20"
+                aria-describedby="usernameHelp"
+                required
+              />
+            </label>
+
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                placeholder="Create a password"
+                minlength="8"
+                aria-describedby="passwordHelp"
+                required
+              />
+            </label>
+
+            <button type="submit">Sign Up</button>
+          </form>
+        </section>
+
+        <!-- Sign‑in form -->
+        <section id="signin" aria-labelledby="signin-title">
+          <h2 id="signin-title">Welcome Back</h2>
+          <form action="login.php" method="post" autocomplete="off">
+            <label>
+              Username or Email
+              <input
+                type="text"
+                name="login"
+                placeholder="Username or Email"
+                aria-describedby="loginHelp"
+                required
+              />
+            </label>
+
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                aria-describedby="signinPasswordHelp"
+                required
+              />
+            </label>
+
+            <button type="submit">Sign In</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- ───────────── Footer ───────────── -->
+      <footer>
         <p>
-          <strong>Children of Yves: Arcania</strong> is a browser-based RPG where
-          new-world myth and heartfelt storytelling entwine. Shape a lineage,
-          master the waters of Fontaine Youth, search for the City of Gold, discover the lost colony of Roanoke, and experience a fantasy reimagining of early American history.
+          © 2025 Children of Yves • 
+          <a href="mailto:support@yves-game.com">Contact Support</a>
         </p>
-
-        <p>
-          <a class="cta-button" href="#signup">Begin Your Journey →</a>
-        </p>
-      </section>
-
-      <!-- Sign-up form -->
-      <section id="signup" aria-labelledby="signup-title">
-        <h2 id="signup-title">Create an Account</h2>
-
-        <form action="register.php" method="post" autocomplete="off">
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              aria-describedby="emailHelp"
-              required
-            />
-          </label>
-
-          <label>
-            Username
-            <input
-              type="text"
-              name="username"
-              placeholder="Choose a name…"
-              minlength="3"
-              maxlength="20"
-              aria-describedby="usernameHelp"
-              required
-            />
-          </label>
-
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              placeholder="Create a password"
-              minlength="8"
-              aria-describedby="passwordHelp"
-              required
-            />
-          </label>
-
-          <button type="submit">Sign Up</button>
-        </form>
-      </section>
-
-      <!-- Sign-in form -->
-      <section id="signin" aria-labelledby="signin-title">
-        <h2 id="signin-title">Welcome Back</h2>
-
-        <form action="login.php" method="post" autocomplete="off">
-          <label>
-            Username or Email
-            <input
-              type="text"
-              name="login"
-              placeholder="Username or Email"
-              aria-describedby="loginHelp"
-              required
-            />
-          </label>
-
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              placeholder="Your password"
-              aria-describedby="signinPasswordHelp"
-              required
-            />
-          </label>
-
-          <button type="submit">Sign In</button>
-        </form>
-      </section>
-    </main>
-
-    <!-- ───────────── Footer ───────────── -->
-    <footer>
-      <p>
-        © 2025 Children of Yves • 
-        <a href="mailto:support@yves-game.com">Contact Support</a>
-      </p>
-    </footer>
+      </footer>
+    </div><!-- /.wrapper -->
 
     <!-- ↓ add JS later (form validation, modals, etc.) -->
     <script src="assets/js/main.js" defer></script>

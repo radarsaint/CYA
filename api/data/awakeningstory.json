@@ -1,0 +1,171 @@
+[
+    {
+      "id": "arcane_charge",
+      "label": "The Arcane Epiphany: Spellbound Revelation",
+      "summary": "In a dimly lit chamber filled with ancient tomes and mystical artifacts, you stood before a weathered spellbook, your heart racing with anticipation. The air was charged with arcane energy, and the room seemed to pulse with an otherworldly glow. As you traced the intricate symbols within the spellbook, a surge of power coursed through you. With each incantation and gesture, you summoned magical energies that danced and swirled around you like vivid, living threads of light. It was a moment of profound revelation, as if the very essence of the arcane had unveiled its secrets to you. In that pivotal moment, your unwavering focus and unyielding determination shone like a beacon in the arcane darkness. Your actions were not just those of a novice; they were the embodiment of arcane epiphany. In that moment, the Arcane Wellspring within you awakened, marking you as a conduit of the arcane's boundless potential.",
+      "equipment": [
+        "A spellbook filled with cryptic incantations",
+        "A robe adorned with arcane symbols",
+        "A crystal staff that resonates with the essence of the arcane wellspring"
+      ],
+      "conditions": {
+        "wellspring": ["Arcane"],
+        "disposition": ["Charge"]
+      }
+    },
+    {
+      "id": "arcane_withdraw",
+      "label": "The Arcane Veil: Veiled Enigma",
+      "summary": "In the heart of an ancient, mystical forest, you stumbled upon a hidden glade bathed in the ethereal glow of enchanted flora. The air was thick with the secrets of the arcane, and the very trees whispered their ancient incantations. A mysterious amulet around your neck began to shimmer with a subtle, enigmatic light, resonating with the arcane mysteries that surrounded you. In this enchanted grove, you chose to embrace the role of a guardian, safeguarding the ancient magic that dwelled within. As you protected the arcane flora and nurtured the mystical creatures, your robe seemed to blend seamlessly with the enchanted surroundings, a symbol of your commitment to preserving the arcane's secrets. With each act of protection and preservation, the crystal staff you held emitted a soothing energy, as if channeling the very essence of the forest's enigma. Your actions were not those of a traditional protector, but a guardian of the arcane mysteries, an embodiment of the veiled enigma that permeated the glade. In that moment of connection with the arcane heart of the forest, the Arcane Wellspring within you awakened, marking you as a steward of arcane secrets. You had become a living testament to the power of preservation and enigma in this mystical grove.",
+      "equipment": [
+        "A mysterious amulet",
+        "A robe adorned with arcane symbols",
+        "A crystal staff resonating with the mysteries of the arcane forest"
+      ],
+      "conditions": {
+        "wellspring": ["Arcane"],
+        "disposition": ["Withdraw"]
+      }
+    },
+    {
+      "id": "arcane_hold",
+      "label": "The Arcane Observatory: Cosmic Insight",
+      "summary": "High atop a secluded tower, you gazed through an ornate telescope at the boundless expanse of the night sky. The stars shimmered with arcane brilliance, and the distant planets seemed to hold the secrets of the universe. Draped in your observatory cloak, you felt a profound connection to the cosmic forces that governed the arcane. In this solitary observatory, you assumed the role of a cosmic scholar, deciphering the arcane constellations and celestial patterns. Your observatory cloak blended seamlessly with the cosmic tapestry above, a testament to your devotion and understanding of the arcane cosmos. With each night of study and contemplation, the crystal staff in your hand channeled the power of the stars, illuminating the observatory with its celestial radiance. Your actions were not those of a typical scholar, but a guardian of cosmic insight, embracing the mysteries of the arcane heavens. In that moment of deep connection with the cosmos, the Arcane Wellspring within you awakened, marking you as a custodian of arcane wisdom. You had become a living testament to the power of devotion and communion with the arcane cosmos in this secluded observatory.",
+      "equipment": [
+        "An ornate telescope",
+        "An observatory cloak adorned with celestial motifs",
+        "A crystal staff resonating with the cosmic insights of the arcane"
+      ],
+      "conditions": {
+        "wellspring": ["Arcane"],
+        "disposition": ["Hold"]
+      }
+    },
+    {
+      "id": "divine_charge",
+      "label": "The Divine Awakening: Serene Encounter",
+      "summary": "In a moment that transcended the boundaries of the ordinary, you found yourself standing in a breathtaking meadow bathed in the soft glow of sunlight. The air was filled with the enchanting melodies of songbirds, and a gentle breeze carried the sweet scent of blooming flowers. Amidst this serene beauty, you clutched your blessed holy symbol with profound reverence, feeling an indescribable sense of purpose and connection. It was as though the very essence of divinity had touched your soul. In the distance, a radiant wellspring of divine energy beckoned, its presence a beacon of light and tranquility. With a heart brimming with determination and awe, you took each step forward, and the world seemed to hold its breath in reverence. In that pivotal moment, your unwavering faith and unyielding resolve shone, not as a warrior, but as a vessel for something greater. Your actions were not just those of an individual; they were the embodiment of divine awakening. In that moment, the Divine Wellspring within you awakened, marking you as a conduit of the divine in this breathtaking meadow. You had become a living testament to the power of faith and connection to the divine.",
+      "equipment": [
+        "A blessed holy symbol",
+        "A robe of pure white adorned with intricate symbols",
+        "A radiant staff infused with the essence of the divine wellspring"
+      ],
+      "conditions": {
+        "wellspring": ["Divine"],
+        "disposition": ["Charge"]
+      }
+    },
+    {
+      "id": "divine_withdraw",
+      "label": "The Divine Retreat: Harmony's Embrace",
+      "summary": "Beneath the starlit canopy of a tranquil forest, you found yourself enveloped in a profound sense of peace. The ancient trees stood as silent sentinels, and a gentle stream murmured a soothing melody as it wound its way through the woods. The sacred amulet around your neck pulsed with a serene glow, resonating with the harmony of the natural world. In this tranquil haven, you chose to embrace the role of a guardian, ensuring that this serene wilderness remained untouched by chaos. As you tended to the wounded creatures and nurtured the forest's flora, your pristine healer's robe seemed to become one with the surroundings, a symbol of your commitment to preserving the harmony of nature. With each act of protection and healing, the staff in your hand radiated a calming energy, as if channeling the very essence of the forest's serenity. Your actions were not those of a traditional protector, but a guardian of the natural world, embodying the essence of harmony itself. In that moment of connection with the tranquil heart of the forest, the Divine Wellspring within you awakened, marking you as a steward of divine harmony. You had become a living testament to the power of preservation and balance in this serene woodland.",
+      "equipment": [
+        "A sacred amulet",
+        "A pristine healer's robe adorned with symbols of nature",
+        "A staff resonating with the calming essence of the forest"
+      ],
+      "conditions": {
+        "wellspring": ["Divine"],
+        "disposition": ["Withdraw"]
+      }
+    },
+    {
+      "id": "divine_hold",
+      "label": "The Divine Vigil: Starlit Devotion",
+      "summary": "Atop a remote mountain peak, you stood beneath the vast, star‑studded canvas of the night sky. The howling wind carried whispers of distant constellations, and the chill in the air invigorated your spirit. Wrapped in your consecrated prayer shawl, you felt an overwhelming sense of purpose and connection with the cosmos. In this sacred solitude, you assumed the role of a vigilant observer, a guardian of the mysteries of the universe. Your consecrated prayer shawl seemed to blend seamlessly with the night sky, a testament to your devotion and connection to the celestial realm. With each moment of introspection and devotion, the radiant staff in your hand channeled the power of the stars, illuminating the mountaintop with its celestial radiance. Your actions were not those of a typical observer, but a guardian of the cosmic order, embracing the mysteries of the night. In that moment of deep connection with the heavens, the Divine Wellspring within you awakened, marking you as a custodian of divine wisdom. You had become a living testament to the power of devotion and communion with the celestial realms in this remote mountaintop sanctuary.",
+      "equipment": [
+        "A consecrated prayer shawl",
+        "A staff resonating with the power of the stars",
+        "A blessed holy book filled with celestial wisdom"
+      ],
+      "conditions": {
+        "wellspring": ["Divine"],
+        "disposition": ["Hold"]
+      }
+    },
+    {
+      "id": "eldritch_charge",
+      "label": "The Eldritch Awakening: Abyssal Revelation",
+      "summary": "In the depths of a long‑forgotten, decrepit library hidden beneath a crumbling mansion, you stumbled upon an ancient, forbidden tome. The air was heavy with the scent of old parchment, and the flickering candlelight cast eerie shadows on the arcane symbols that adorned the book's pages. As your trembling hand traced the eldritch runes within the tome, a creeping sense of dread and fascination overcame you. With each word you whispered from the forbidden text and each sigil you inscribed in blood, an eldritch force surged through your veins like tendrils of darkness coiling around your very soul. It was a moment of harrowing revelation, as if the abyss itself had whispered its secrets to you. In that pivotal moment, your unwavering fascination and unyielding curiosity shone through the encroaching madness. Your actions were not just those of a seeker; they were the embodiment of eldritch awakening. In that moment, the Eldritch Shadow Wellspring within you awakened, marking you as a vessel of the incomprehensible and the abyssal. You had become a living testament to the power of eldritch revelation.",
+      "equipment": [
+        "The forbidden tome bound in human flesh and inscribed with madness‑inducing symbols",
+        "A tattered robe that seems to ripple with eldritch energy",
+        "A shadowy dagger forged from the remnants of your sanity"
+      ],
+      "conditions": {
+        "wellspring": ["Eldritch Shadow"],
+        "disposition": ["Charge"]
+      }
+    },
+    {
+      "id": "eldritch_withdraw",
+      "label": "The Haunting Pact: Whispered Covenant",
+      "summary": "In the dead of night, within a desolate, forsaken cemetery, you found yourself drawn to an ancient, crumbling mausoleum. The moonlight filtered through the twisted branches of gnarled trees, casting eerie shadows upon the moss‑covered gravestones. It was there, in the presence of lingering spirits and the chill of the abyss, that you heard the haunting whispers. Rather than succumbing to fear, you willingly made a pact with the spectral apparitions that had plagued your mind. As you forged this connection to the eldritch shadows, your spectral mask concealed your identity, and your diary became a vessel for the haunting messages and stories of the revenants that guided you. The shadowy cloak you wore allowed you to blend seamlessly with the spectral realm. Your actions were not those of a typical infiltrator; they were the embodiment of the whispered covenant with the otherworldly. In that moment, the Eldritch Shadow Wellspring within you awakened, marking you as a conduit of the spectral and the psychic. You had become a living testament to the power of the eldritch pact.",
+      "equipment": [
+        "A spectral mask concealing your identity and linking you to the ethereal plane",
+        "A diary filled with the chilling messages and stories of revenants",
+        "A shadowy cloak that allows you to traverse the realms of the spectral and the mundane"
+      ],
+      "conditions": {
+        "wellspring": ["Eldritch Shadow"],
+        "disposition": ["Withdraw"]
+      }
+    },
+    {
+      "id": "eldritch_hold",
+      "label": "The Mind's Resilience: Unwavering Sanity",
+      "summary": "In the bowels of an ancient, maddening labyrinth, you found yourself surrounded by incomprehensible horrors and mind‑bending vistas. The very walls seemed to pulse with eldritch energy, and the air was filled with maddening whispers that threatened to unravel your sanity. But you, through sheer force of will and an unyielding determination to retain your sanity, resisted the eldritch madness. As you clung to your last vestiges of reason, the amulet around your neck with its labyrinthine pattern symbolizing the intricate nature of your mind emitted a faint, protective aura. The crystalline sphere you held contained the trapped essence of a psychic entity that whispered words of guidance and comfort. The staff in your hand amplified your psychic abilities, allowing you to maintain control over your surroundings. Your actions were not those of a typical observer; they were the embodiment of the unwavering resilience of the mind. In that moment of intense psychic struggle and determination, the Eldritch Shadow Wellspring within you awakened, marking you as a bastion of sanity in a world of eldritch madness. You had become a living testament to the power of mental resilience in the face of incomprehensible horrors.",
+      "equipment": [
+        "An amulet with an etched labyrinthine pattern symbolizing the intricate nature of your mind",
+        "A crystalline sphere containing the trapped essence of a psychic entity",
+        "A staff that amplifies your psychic abilities, allowing you to maintain control over your surroundings"
+      ],
+      "conditions": {
+        "wellspring": ["Eldritch Shadow"],
+        "disposition": ["Hold"]
+      }
+    },
+    {
+      "id": "valor_charge",
+      "label": "The Apex of Mortal Prowess: Triumph",
+      "summary": "In the heart of a coliseum under the scorching sun that beat down upon the roaring crowds, you faced a formidable opponent. The arena trembled with anticipation as the clash of steel echoed through the air. Your opponent, a skilled warrior, was renowned for their unmatched prowess in combat. But you, with unyielding determination and a heart filled with valor, stood your ground. As the dust swirled around you, the gleam of your weapon caught the sunlight, creating a dazzling display. With each swing and parry, your movements became a mesmerizing dance of skill and precision. The crowd's cheers and gasps were a testament to the extraordinary spectacle before them. In that pivotal moment, your unwavering determination and unmatched skill shone as brightly as the sun itself. Your actions were not those of a mere mortal; they were the embodiment of the apex of mortal prowess. In that moment, the Wellspring of Valor within you awakened, marking you as a paragon of courage and skill. You had become a living testament to the power of unyielding valor on the battlefield.",
+      "equipment": [
+        "A mastercrafted weapon that bears the scars of countless battles",
+        "A suit of armor adorned with intricate engravings and reinforced with the finest materials",
+        "A heraldic crest that symbolizes your status as a true champion of valor"
+      ],
+      "conditions": {
+        "wellspring": ["Valor"],
+        "disposition": ["Charge"]
+      }
+    },
+    {
+      "id": "valor_withdraw",
+      "label": "The Benevolent Mentor: Guiding Light",
+      "summary": "In a secluded training ground, you took on the role of mentor to a young and aspiring warrior. The sun cast long shadows as you guided your protégé through the intricate forms and techniques of combat. Your wisdom and experience flowed effortlessly, illuminating the path to mastery. As the day unfolded, your protégé's skills improved and their confidence grew. The mentor's robe you wore seemed to glow with an inner light, symbolizing the knowledge you shared. The staff in your hand became a symbol of guidance, directing your protégé toward greater heights. In that pivotal moment, your dedication to nurturing talent and sharing your wisdom shone as brightly as the sun itself. Your actions were not those of a typical mentor; they were the embodiment of benevolence and guidance. In that moment, the Wellspring of Valor within you awakened, marking you as a beacon of inspiration and mentorship. You had become a living testament to the power of benevolent leadership on the battlefield.",
+      "equipment": [
+        "A mentor's robe that carries the weight of generations of wisdom",
+        "A staff that symbolizes your role as a guiding light",
+        "A tome filled with the accumulated knowledge of countless battles and strategies"
+      ],
+      "conditions": {
+        "wellspring": ["Valor"],
+        "disposition": ["Withdraw"]
+      }
+    },
+    {
+      "id": "valor_hold",
+      "label": "The Indomitable Will: Endurance",
+      "summary": "In the midst of a grueling trial of endurance, you faced a seemingly insurmountable obstacle course. The sun beat down relentlessly as you navigated treacherous terrain, climbed towering obstacles, and waded through murky waters. Fatigue threatened to overcome you at every turn, but your will remained unbroken. As you pushed your body to its limits, the indomitable spirit within you burned like a beacon of strength. The crest you wore symbolized the unwavering determination that had carried you through the most challenging of trials. The cloak you wore seemed to ripple with the very essence of endurance, providing you with the fortitude to press on. In that pivotal moment, your relentless drive and unbreakable will shone as brightly as the sun itself. Your actions were not those of a typical competitor; they were the embodiment of unyielding endurance. In that moment, the Wellspring of Valor within you awakened, marking you as a symbol of unwavering strength and resilience. You had become a living testament to the power of enduring in the face of adversity.",
+      "equipment": [
+        "A crest that embodies the unbreakable will of a champion",
+        "A cloak that grants the endurance to overcome any obstacle",
+        "A set of finely crafted boots that carry the weight of countless trials and tribulations"
+      ],
+      "conditions": {
+        "wellspring": ["Valor"],
+        "disposition": ["Hold"]
+      }
+    }
+  ]
+  

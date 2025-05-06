@@ -1,131 +1,292 @@
-/* ───────────── General Reset & Base Styles ───────────── */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
-    background-color: #fdfaf6;
-    color: #1e1e1e;
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  h1.logo {
-    font-size: 2.2rem;
-    color: #2a2a2a;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    margin-bottom: 1rem;
-  }
-  
-  /* ───────────── Navigation ───────────── */
-  nav {
-    margin-bottom: 2rem;
-  }
-  
-  nav a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #1976d2;
-    font-weight: 500;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ───────────── CTA Button ───────────── */
-  .cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #1976d2;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #135ba1;
-  }
-  
-  /* ───────────── Forms ───────────── */
-  form {
-    margin-top: 1rem;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  form input {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin-top: 0.25rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  form input:focus {
-    border-color: #1976d2;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
-  }
-  
-  button[type="submit"] {
-    margin-top: 1rem;
-    background-color: #1976d2;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #125aa8;
-  }
-  
-  /* ───────────── Footer ───────────── */
-  footer {
-    margin-top: 4rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
-    color: #555;
-    text-align: center;
-  }
-  
-  footer a {
-    color: #1976d2;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+/*────────────────────────────────────────────────────────────────────────*/
+/*                     Theme Variables & Palettes                         */
+/*────────────────────────────────────────────────────────────────────────*/
+:root {
+  /* Background */
+  --bg-image: url('../img/hero-bg.png');
+
+  /* Overlay & Text */
+  --overlay: rgba(0, 0, 0, 0.5);
+  --text: #fdfaf6;
+  --text-muted: #ddd;
+
+  /* Brand colors */
+  --brand-blue: #1976d2;
+  --brand-blue-dark: #135ba1;
+  --link-light: #9fc9ff;
+
+  /* Forms */
+  --form-bg: rgba(255, 255, 255, 0.1);
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+}
+
+/* Dark theme overrides */
+:root[data-theme="dark"] {
+  --overlay: rgba(0, 0, 0, 0.8);
+  --text: #e0e0e0;
+  --text-muted: #aaa;
+  --brand-blue: #409eff;
+  --brand-blue-dark: #1f6feb;
+  --link-light: #80c0ff;
+  --form-bg: rgba(20, 20, 20, 0.6);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                         Full‑screen background                         */
+/*────────────────────────────────────────────────────────────────────────*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                         Dark overlay                                   */
+/*────────────────────────────────────────────────────────────────────────*/
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 0;
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                        Theme Toggle Button                             */
+/*────────────────────────────────────────────────────────────────────────*/
+#themeToggle {
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s ease;
+}
+#themeToggle:hover {
+  color: var(--link-light);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                         Wrapper content                                */
+/*────────────────────────────────────────────────────────────────────────*/
+.wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                          Typography & Layout                           */
+/*────────────────────────────────────────────────────────────────────────*/
+h1.logo {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--link-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                          CTA Button                                    */
+/*────────────────────────────────────────────────────────────────────────*/
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--brand-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  margin-top: var(--space-sm);
+}
+
+.cta-button:hover {
+  background-color: var(--brand-blue-dark);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                            Forms                                       */
+/*────────────────────────────────────────────────────────────────────────*/
+.section-panel {
+  background: var(--form-bg);
+  padding: var(--space-md);
+  border-radius: 8px;
+  margin: var(--space-md) auto;
+  max-width: 500px;
+}
+
+form label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+  font-weight: 500;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: none;
+  border-radius: 4px;
+}
+
+form input:focus,
+form select:focus {
+  outline: 2px solid var(--brand-blue);
+}
+
+button[type="submit"] {
+  margin-top: var(--space-sm);
+  background: var(--brand-blue);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                          Wizard Steps                                  */
+/*────────────────────────────────────────────────────────────────────────*/
+.step {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Progress Bar */
+.progress {
+  display: flex;
+  margin-bottom: var(--space-md);
+}
+.progress div {
+  flex: 1;
+  height: 8px;
+  background: #ccc;
+  margin-right: 4px;
+  transition: background 0.3s;
+}
+.progress div.active {
+  background: var(--brand-blue);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-lg);
+}
+.buttons button {
+  padding: 0.6rem 1.2rem;
+  background: var(--brand-blue);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons button[disabled] {
+  background: #999;
+}
+/*────────────────────────────────────────────────────────────────────────*/
+/*                         Wizard Step Radios                             */
+/*────────────────────────────────────────────────────────────────────────*/
+.step label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--space-md);
+  cursor: pointer;
+  white-space: nowrap;    /* ← prevent the text from wrapping */
+}
+
+.step label input[type="radio"] {
+  margin-right: var(--space-xs);
+  list-style: none;
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                           Footer                                       */
+/*────────────────────────────────────────────────────────────────────────*/
+footer {
+  text-align: center;
+  padding: var(--space-sm);
+  font-size: 0.9rem;
+  background: var(--overlay);
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--link-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*────────────────────────────────────────────────────────────────────────*/
+/*                         Responsive Tweaks                              */
+/*────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 500px) {
+  .wrapper { padding: var(--space-sm); }
+  h1.logo { font-size: 1.8rem; }
+  nav a { font-size: 0.9rem; }
+  .section-panel { padding: var(--space-sm); margin: var(--space-sm); }
+}

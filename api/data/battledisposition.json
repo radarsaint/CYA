@@ -1,0 +1,20 @@
+{
+    "battleDispositions": [
+      {
+        "id": "charge",
+        "label": "Charge",
+        "description": "You burst into the fray with unrelenting aggression, striking first and hard. Your intent is to overwhelm your foes before they can react."
+      },
+      {
+        "id": "withdraw",
+        "label": "Withdraw",
+        "description": "You keep your distance—ideal for ranged fighters and area‑of‑effect casters—harassing enemies from afar and striking when they step into your zone of control."
+      },
+      {
+        "id": "hold",
+        "label": "Hold",
+        "description": "You brace yourself and stand your ground, observing your opponent’s moves and conserving your strength for the perfect counterattack."
+      }
+    ]
+  }
+  

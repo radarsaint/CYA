@@ -1,0 +1,15 @@
+{
+    "races": {
+      "Arcanian Cryptids": ["Jackalope","Cranberry Bog Waif","Bigfoot","Halfwudgie","Mothman","Wendigo","Jersey Devil"],
+      "Arcanian Humanoids": ["Tatankan","Chinnokin","Uru","Seraph","Huldu","Gneorgian"],
+      "Empyrean": ["Human","Elf","Brunelock","Weegie","Gnerman"]
+    },
+    "wellsprings": ["Arcane","Divine","Valor","Eldritch Shadow"],
+    "focusTypes": ["Corporea","Essentia"],
+    "foci": {
+      "Corporea": ["Guts","Stride","Atlas","Maul","Icarus","Virtuoso"],
+      "Essentia": ["Resonance","Logic","Rhetoric","Nobility","Heartflame","Philosophy"]
+    },
+    "dispositions": ["Charge","Hold","Withdraw"]
+  }
+  

@@ -1,0 +1,11 @@
+{
+    "stats": ["luck", "speed", "endurance"],
+    "defaults": {
+      "luck": 1,
+      "speed": 1,
+      "endurance": 1
+    },
+    "min": 1,
+    "max": 4,
+    "totalPoints": 4
+  }

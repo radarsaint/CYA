@@ -1,0 +1,20 @@
+{
+    "socialDispositions": [
+      {
+        "tag": "Engage",
+        "label": "Engage",
+        "description": "You throw yourself into social interactions—boldly starting conversations, forging connections, and using charm or persuasion to shape events."
+      },
+      {
+        "tag": "Disengage",
+        "label": "Disengage",
+        "description": "You hang back and manipulate from the shadows—preferring subtlety, misdirection, or quiet influence over direct confrontation."
+      },
+      {
+        "tag": "Remain",
+        "label": "Remain",
+        "description": "You stay calm and observant—listening more than speaking, weighing all angles, and intervening only when absolutely necessary."
+      }
+    ]
+  }
+  

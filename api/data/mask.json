@@ -1,0 +1,143 @@
+[
+    {
+      "tag": "mask_noble_grace",
+      "name": "Noble Grace",
+      "description": "You rely on an aristocratic bearing and polished manners to open doors in high society.",
+      "advantages": ["noble", "gentry", "Columbia", "EmpireCity"],
+      "disadvantages": ["underclass", "outcast", "CalicoGhosttown"]
+    },
+    {
+      "tag": "mask_earthworker_simplicity",
+      "name": "Earthworker’s Simplicity",
+      "description": "You lean on plain speech and common wisdom to earn trust among laborers and frontier folk.",
+      "advantages": ["peasantry", "commoner", "rancher", "miner", "SierraNevada"],
+      "disadvantages": ["bourgeoisie", "scholar", "CityOfLegend"]
+    },
+    {
+      "tag": "mask_silvered_tongue",
+      "name": "Silvered Tongue",
+      "description": "Your smooth words and friendly smile grease the wheels of commerce and bureaucracy.",
+      "advantages": ["bourgeoisie", "trader", "snakeoil_salesman", "SeabreezeHarbor"],
+      "disadvantages": ["artisan", "soldier", "underclass"]
+    },
+    {
+      "tag": "mask_ironhide_stoicism",
+      "name": "Ironhide Stoicism",
+      "description": "You project unflappable strength—guards and mercenaries see one of their own.",
+      "advantages": ["soldier", "blacksmith", "artisan", "GoldenDawn"],
+      "disadvantages": ["gambler", "underclass", "secretSocieties"]
+    },
+    {
+      "tag": "mask_bookish_cowl",
+      "name": "Bookish Cowl",
+      "description": "You hide behind a hood of lore and learned references to impress scholars and mages.",
+      "advantages": ["scholar", "engineer", "Rosicrucian", "Holy Gnoman Empire"],
+      "disadvantages": ["rancher", "miner", "soldier"]
+    },
+    {
+      "tag": "mask_swamp_whisper",
+      "name": "Swamp Whisper",
+      "description": "You adopt the hushed tones and mannerisms of Bayouque folk to slip past suspicion.",
+      "advantages": ["Bayouque", "barber", "Fontaine", "Mason"],
+      "disadvantages": ["CityOfLegend", "EmeraldCity", "bourgeoisie"]
+    },
+    {
+      "tag": "mask_railmaster_pomp",
+      "name": "Railmaster’s Pomp",
+      "description": "You sport oil‑smudged gloves and precise jargon to command respect from engineers and captains.",
+      "advantages": ["engineer", "trader", "EmeraldCity", "Steel and Steam of the Erie Road"],
+      "disadvantages": ["Croatoan", "underclass", "CalicoGhosttown"]
+    },
+    {
+      "tag": "mask_holy_symbol",
+      "name": "Holy Symbol",
+      "description": "A discreet emblem of faith lends you credibility with clergy, cultists, and the devout.",
+      "advantages": ["Rosicrucian", "Mason", "peasantry", "scholar"],
+      "disadvantages": ["GoldenDawn", "HWWB", "secretSocieties"]
+    },
+    {
+      "tag": "mask_frontier_charm",
+      "name": "Frontier Charm",
+      "description": "A wink, a drawl, and a knowing nod—outcasts and gamblers flock to you as one of their own.",
+      "advantages": ["gambler", "outcast", "snakeoil_salesman", "CalicoGhosttown"],
+      "disadvantages": ["noble", "gentry", "scholar"]
+    },
+    {
+      "tag": "mask_mystic_veil",
+      "name": "Mystic Veil",
+      "description": "You veil your emotions and speak in riddles to intrigued adepts—and frustrate ordinary folk.",
+      "advantages": ["GoldenDawn", "Rosicrucian", "Mason"],
+      "disadvantages": ["artisan", "peasantry", "underclass"]
+    },
+    {
+      "tag": "mask_gilded_demeanor",
+      "name": "Gilded Demeanor",
+      "description": "You present yourself as polished merchant‑aristocracy, winning nods in opulent salons.",
+      "advantages": ["bourgeoisie", "trader", "CityOfLegend"],
+      "disadvantages": ["rancher", "miner", "CalicoGhosttown"]
+    },
+    {
+      "tag": "mask_ledger_wit",
+      "name": "Merchant’s Ledger",
+      "description": "You quote precise figures and tradesman’s gossip to gain the ear of shopkeepers and bankers.",
+      "advantages": ["trader", "bourgeoisie", "snakeoil_salesman"],
+      "disadvantages": ["underclass", "soldier", "secretSocieties"]
+    },
+    {
+      "tag": "mask_cloak_of_shadows",
+      "name": "Cloak of Shadows",
+      "description": "A furtive stare and quiet steps make you welcome among thieves and spy‑rings.",
+      "advantages": ["underclass", "outcast", "secretSocieties", "CalicoGhosttown"],
+      "disadvantages": ["noble", "gentry", "scholar"]
+    },
+    {
+      "tag": "mask_saloon_swagger",
+      "name": "Saloon Swagger",
+      "description": "A hard‑won smirk and cock of the hat endear you to riverboat gamblers and drifters.",
+      "advantages": ["gambler", "snakeoil_salesman", "SeabreezeHarbor"],
+      "disadvantages": ["scholar", "Holy Gnoman Empire", "CityOfLegend"]
+    },
+    {
+      "tag": "mask_frontier_resolve",
+      "name": "Frontier Resolve",
+      "description": "Your steely gaze and terse speech fit right in with militia and Warden’s agents.",
+      "advantages": ["soldier", "wardensAgent", "Oro"],
+      "disadvantages": ["underclass", "gambler", "secretSocieties"]
+    },
+    {
+      "tag": "mask_inventor_smudge",
+      "name": "Inventor’s Smudge",
+      "description": "Grease‑spotted goggles and sketchbook in hand win favor among artisans and engineers.",
+      "advantages": ["artisan", "engineer", "EmeraldCity"],
+      "disadvantages": ["noble", "peasantry", "HWWB"]
+    },
+    {
+      "tag": "mask_bayou_lament",
+      "name": "Bayou’s Lament",
+      "description": "A lilting drawl and mournful tune bind you to Fontaine’s worshippers and swamp dwellers.",
+      "advantages": ["Bayouque", "Fontaine", "barber"],
+      "disadvantages": ["CityOfLegend", "gentry", "snakeoil_salesman"]
+    },
+    {
+      "tag": "mask_scholars_quill",
+      "name": "Scholar’s Quill",
+      "description": "A well‑worn quill and know‑it‑all pose earn you respect in universities and arcane halls.",
+      "advantages": ["scholar", "Rosicrucian", "Holy Gnoman Empire"],
+      "disadvantages": ["rancher", "soldier", "underclass"]
+    },
+    {
+      "tag": "mask_desert_roar",
+      "name": "Desert’s Roar",
+      "description": "A booming voice and dust‑browned cloak mark you as a son of the dunes to Oro’s people.",
+      "advantages": ["JoshuaTree", "Oro", "miner", "rancher"],
+      "disadvantages": ["emeraldCity", "scholar", "secretSocieties"]
+    },
+    {
+      "tag": "mask_woodland_canticle",
+      "name": "Woodland Canticle",
+      "description": "You hum ancient forest songs that put Sequoia guardians and Huldu at ease.",
+      "advantages": ["SequoiaForest", "Huldu", "artisan"],
+      "disadvantages": ["CityOfLegend", "gentry", "engineer"]
+    }
+  ]
+  

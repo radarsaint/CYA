@@ -1,0 +1,9 @@
+{
+    "wellsprings": [
+      { "id": "arcane",         "label": "Arcane" },
+      { "id": "divine",         "label": "Divine" },
+      { "id": "valor",          "label": "Valor" },
+      { "id": "eldritch_shadow","label": "Eldritch Shadow" }
+    ]
+  }
+  

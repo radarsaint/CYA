@@ -1,0 +1,87 @@
+{
+  "socialClasses": [
+    { "tag": "noble",        "description": "Born to wealth, title, and courtly influence" },
+    { "tag": "gentry",       "description": "Minor nobility or wealthy landowners" },
+    { "tag": "bourgeoisie",  "description": "Merchants, bankers, and city dignitaries" },
+    { "tag": "artisan",      "description": "Skilled craftworkers and guild members" },
+    { "tag": "peasantry",    "description": "Rural laborers and subsistence farmers" },
+    { "tag": "commoner",     "description": "Town‑dwellers without special rank" },
+    { "tag": "outcast",      "description": "Exiles, ex‑convicts, and those forced beyond society" },
+    { "tag": "underclass",   "description": "Street urchins, beggars, and the destitute" }
+  ],
+
+  "occupations": [
+    { "tag": "rancher",      "description": "Stewards of land and livestock on frontier homesteads" },
+    { "tag": "miner",        "description": "Diggers in tunnels, veins, and boom‑town shafts" },
+    { "tag": "gambler",      "description": "Riverboat, saloon, and dice‑table risk‑takers" },
+    { "tag": "blacksmith",   "description": "Forgers of weapons, tools, and armor" },
+    { "tag": "trader",       "description": "Caravansers and shopkeepers moving goods between towns" },
+    { "tag": "soldier",      "description": "Militia, mercenaries, and city guards" },
+    { "tag": "scholar",      "description": "University masters, scribes, and arcane researchers" },
+    { "tag": "barber",       "description": "Herbalists, apothecaries, and battlefield medics" },
+    { "tag": "engineer",     "description": "Builders of rail, steam devices, and fortifications" },
+    { "tag": "snakeoil_salesman", "description": "Sells cure‑alls, hair tonics, and cocaine‑laced beverages" }
+  ],
+
+  "regions": [
+    { "tag": "CityOfLegend",    "description": "Sprawling west‑coast metropolis of steam and secrets" },
+    { "tag": "SeabreezeHarbor", "description": "Coastal trade hub and fishing port" },
+    { "tag": "SierraNevada",    "description": "Treacherous peaks and ancient ruins" },
+    { "tag": "SequoiaForest",   "description": "Enchanted groves of cathedral‑tall redwoods" },
+    { "tag": "CalicoGhosttown", "description": "Dust‑stricken badlands under Croatoan’s shadow" },
+    { "tag": "GreatBarrier",    "description": "Mystical divide between New and Old Worlds" },
+    { "tag": "EmeraldCity",     "description": "North‑west steam‑punk port and forest gateway" },
+    { "tag": "JoshuaTree",      "description": "Desert oasis of bandits and caravan routes" },
+    { "tag": "Bayouque",        "description": "Everflowing glades and mystical waterways" }
+  ],
+
+  "wardens": [
+    { "tag": "Columbia", "description": "Warden of Liberty and the North East" },
+    { "tag": "Cascadia", "description": "Warden of the Emerald Tides and North West wilds" },
+    { "tag": "Oro",      "description": "Gilded Sovereign of the Golden Expanse deserts" },
+    { "tag": "Fontaine", "description": "Unfading Queen of the Everflowing Glades" }
+  ],
+
+  "secretSocieties": [
+    { "tag": "GoldenDawn",  "description": "Those whose hearts and minds have been consumed by the hunger" },
+    { "tag": "Rosicrucian", "description": "Guardians of a ley‑line called the Rose Line" },
+    { "tag": "Mason",       "description": "Secret society and follower of the Master Mason" }
+  ],
+
+  "divineThreats": [
+    { "tag": "Croatoan", "description": "He Who Walks Behind—devourer of gods" },
+    { "tag": "HWWB",     "description": "Codename to avoid invoking Croatoan’s gaze" }
+  ],
+
+  "miscellaneous": [
+    { "tag": "wardensAgent",     "description": "Operative acting on behalf of a Warden" },
+    { "tag": "apotheosisReject", "description": "Failed candidate for Apotheosis" },
+    { "tag": "warden",           "description": "Regional ruler of Arcania" }
+  ],
+
+  "races": [
+    { "tag": "Jackalope",           "description": "A swift, horned hare said to be imbued with trickster magic and uncanny luck." },
+    { "tag": "Cranberry Bog Waif",  "description": "A ghostly child of the cranberry marshes, adept at slipping between the living world and the spirit realm." },
+    { "tag": "Bigfoot",             "description": "A hulking forest wanderer whose gentle wisdom belies its formidable strength and stealth." },
+    { "tag": "Halfwudgie",          "description": "Descended from woodland spirits, these lithe folk blend into the trees and wield primal protean powers." },
+    { "tag": "Mothman",             "description": "A winged cryptid whose glowing eyes pierce darkness, oft‑said to foretell calamity or salvation." },
+    { "tag": "Wendigo",             "description": "A towering, frost‑haunted being whose hunger for life force grants uncanny resilience." },
+    { "tag": "Jersey Devil",        "description": "A fiendish flyer from the pine barrens, expert at hit‑and‑run tactics and weaving through dense woods." },
+    { "tag": "Tatankan",            "description": "Buffalo‑headed guardians of the plains, broad‑shouldered and unyielding—symbols of herd endurance." },
+    { "tag": "Chinnokin",           "description": "Salmon‑scaled amphibians of river and pool, swift swimmers and secret‑ford guides." },
+    { "tag": "Uru",                 "description": "Vulture‑folk of sun‑baked canyons, silent scavengers who uncover both carrion and hidden truths." },
+    { "tag": "Seraph",              "description": "Six‑winged, luminescent angel‑beings born of starfire—celestial heralds who bridge mortals and Wardens." },
+    { "tag": "Huldu",               "description": "Ethereal fey‑kin of misty groves, masters of illusion and woodland wards." },
+    { "tag": "Gneorgian",           "description": "Peachpunk gnome‑engineers, ever‑tinkering with cider‑fueled contraptions that push the frontier forward." },
+    { "tag": "Ursine Horrid",       "description": "Grizzly‑folk champions of the Brown Bear Republic, mountain‑forged and fiercely territorial." },
+    { "tag": "Britannia",           "description": "Rugged seafarers and hill‑folk, famed for stout longships, disciplined knights, and fog‑shrouded moors." },
+    { "tag": "Gaul",                "description": "Vineyard‑keepers and forest‑dwellers with mastery of herbal lore, guerrilla tactics, and clan‑based senate rule." },
+    { "tag": "Espania",             "description": "Sun‑bleached conquistadors and baroque nobles whose cavalry circles battlefields like fire beneath gold‑embroidered plumes." },
+    { "tag": "Glassgow",            "description": "City‑elves of smoky forges and glass‑blown spires—mechanists and alchemists fusing arcane magic with artifice." },
+    { "tag": "Weegie",              "description": "Alias for Glassgow elves, known for their intricate glasswork and clockwork inventions." },
+    { "tag": "Burgandy",            "description": "River‑land gardeners famed for floating barge‑markets, wine‑red silks, and waterglyph poetry." },
+    { "tag": "Milanese",            "description": "Courtly duelists and patron‑elves of sculpture and fresco, setting fashion for blade and song across the Empyrean." },
+    { "tag": "Holy Gnoman Empire",  "description": "Theocratic technologists venerating a pantheon of gear‑gods, their steam‑temples churn out clockwork priests and divine engines." },
+    { "tag": "Gnerman",             "description": "Highland tinkers and cider‑press innovators, ever‑braided and goggled, racing kegs and crafting peach‑fueled engines." }
+  ]
+}
