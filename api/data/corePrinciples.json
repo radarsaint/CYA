@@ -1,0 +1,23 @@
+[
+    { "id": "Ambition",    "label": "Ambition"    },
+    { "id": "Compassion",  "label": "Compassion"  },
+    { "id": "Curiosity",   "label": "Curiosity"   },
+    { "id": "Honesty",     "label": "Honesty"     },
+    { "id": "Honor",       "label": "Honor"       },
+    { "id": "Justice",     "label": "Justice"     },
+    { "id": "Redemption",  "label": "Redemption"  },
+    { "id": "Sacrifice",   "label": "Sacrifice"   },
+    { "id": "Wisdom",      "label": "Wisdom"      }
+  ]
+
+  [
+    { "id": "Ambition",    "label": "Ambition"    },
+    { "id": "Compassion",  "label": "Compassion"  },
+    { "id": "Curiosity",   "label": "Curiosity"   },
+    { "id": "Honesty",     "label": "Honesty"     },
+    { "id": "Honor",       "label": "Honor"       },
+    { "id": "Justice",     "label": "Justice"     },
+    { "id": "Redemption",  "label": "Redemption"  },
+    { "id": "Sacrifice",   "label": "Sacrifice"   },
+    { "id": "Wisdom",      "label": "Wisdom"      }
+  ]

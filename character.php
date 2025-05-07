@@ -142,12 +142,17 @@ if ($stmt->fetchColumn() > 0) {
         <input type="hidden" name="endurance" id="inputEndurance" value="1">
       </div>
 
-      <!-- 9: Saga & Mask -->
+      <!-- 9: Saga & Core Principle & Mask -->
       <div class="step">
         <h2>Step 9: Forge Your Saga</h2>
         <label>Saga
           <select name="saga" id="sagaSelect" required>
             <option value="">– select saga –</option>
+          </select>
+        </label>
+        <label>Core Principle
+          <select name="core_principle" id="corePrincipleSelect" required>
+            <option value="">– select principle –</option>
           </select>
         </label>
         <label>Mask
@@ -171,22 +176,23 @@ if ($stmt->fetchColumn() > 0) {
   </div>
   <script>
   document.addEventListener('DOMContentLoaded', async () => {
-    // 1) The EXACT list of config types:
+    // 1) Config types
     const types = [
       'races',
       'wellsprings',
       'focusTypes',
+      'corporea',
+      'essentia',
       'socialdisposition',
       'battledisposition',
       'awakeningstory',
       'saga',
+      'corePrinciples',
       'masks',
-      'essentia',
-      'corporea',
       'mainstats'
     ];
 
-    // 2) Fetch & dispatch each one
+    // 2) Fetch & dispatch each config
     for (let type of types) {
       try {
         const res  = await fetch(`api/config.php?type=${type}`);
@@ -197,215 +203,113 @@ if ($stmt->fetchColumn() > 0) {
       }
     }
 
-// 3) Dispatcher
-function handleConfig(type, data) {
-  switch (type) {
-    case 'races': {
-      const sel = document.getElementById('raceSelect');
-      Object.entries(data).forEach(([group, val]) => {
-        const og = document.createElement('optgroup');
-        og.label = group.replace(/([a-z])([A-Z])/g, '$1 $2');
-        const arr = Array.isArray(val) ? val : [].concat(...Object.values(val));
-        arr.forEach(item => {
-          const tag = (typeof item === 'string' ? item : item.tag);
-          const o   = document.createElement('option');
-          o.value       = tag;
-          o.textContent = tag;
-          og.appendChild(o);
-        });
-        sel.appendChild(og);
-      });
-      break;
-    }
-
-    case 'wellsprings': {
-      const ct = document.getElementById('wellspringContainer');
-      data.forEach(w => {
-        const lbl = document.createElement('label');
-        lbl.innerHTML = `
-          <input 
-            type="radio" 
-            name="wellspring" 
-            value="${w.id}" 
-            required
-          > ${w.label}
-        `;
-        ct.appendChild(lbl);
-        ct.appendChild(document.createElement('br'));
-      });
-      break;
-    }
-
-    case 'focusTypes': {
-      const ct = document.getElementById('focusTypeContainer');
-      data.forEach(ft => {
-        const lbl = document.createElement('label');
-        lbl.innerHTML = `
-          <input 
-            type="radio" 
-            name="focus_type" 
-            value="${ft}" 
-            required
-          > ${ft}
-        `;
-        ct.appendChild(lbl);
-      });
-      break;
-    }
-
-    case 'essentia':
-      window.essentiaFoci = data;
-      break;
-
-    case 'corporea':
-      window.corporeaFoci = data;
-      break;
-
-    case 'socialdisposition':
-    case 'battledisposition': {
-      const selId   = type === 'socialdisposition' ? 'socialDisp' : 'battleDisp';
-      const dispSel = document.getElementById(selId);
-
-      // reset and then unwrap either data or data.dispositions
-      dispSel.innerHTML = '<option value="">– select –</option>';
-      const list = Array.isArray(data)
-        ? data
-        : (Array.isArray(data.dispositions) ? data.dispositions : []);
-
-      list.forEach(d => {
-        const o = document.createElement('option');
-        if (typeof d === 'string') {
-          o.value       = d;
-          o.textContent = d;
-        } else {
-          o.value       = d.id ?? '';
-          o.textContent = d.label ?? d.id ?? '';
+    // 3) Dispatcher
+    function handleConfig(type, data) {
+      switch (type) {
+        case 'races': {
+          const sel = document.getElementById('raceSelect');
+          Object.entries(data).forEach(([grp,val]) => {
+            const og = document.createElement('optgroup');
+            og.label = grp.replace(/([a-z])([A-Z])/g,'$1 $2');
+            const arr = Array.isArray(val)? val : [].concat(...Object.values(val));
+            arr.forEach(item => {
+              const tag = typeof item==='string'? item : item.tag;
+              const o   = document.createElement('option');
+              o.value       = tag;
+              o.textContent = tag;
+              og.appendChild(o);
+            });
+            sel.appendChild(og);
+          });
+          break;
         }
-        dispSel.appendChild(o);
-      });
-      break;
-    }
-
-    case 'awakeningstory': {
-      const sel = document.getElementById('awakeningSelect');
-      data.forEach(a => {
-        const o = document.createElement('option');
-        o.value       = a.id;
-        o.textContent = a.label;
-        sel.appendChild(o);
-      });
-      break;
-    }
-
-    case 'saga': {
-      const sel = document.getElementById('sagaSelect');
-      data.forEach(s => {
-        const o = document.createElement('option');
-        if (typeof s === 'string') {
-          o.value       = s;
-          o.textContent = s;
-        } else {
-          o.value       = s.id ?? '';
-          o.textContent = s.label ?? s.id ?? '';
+        case 'wellsprings': {
+          const ct = document.getElementById('wellspringContainer');
+          data.forEach(w => {
+            const lbl = document.createElement('label');
+            lbl.innerHTML = `
+              <input type="radio" name="wellspring" value="${w.id}" required> ${w.label}
+            `;
+            ct.appendChild(lbl);
+            ct.appendChild(document.createElement('br'));
+          });
+          break;
         }
-        sel.appendChild(o);
-      });
-      break;
-    }
-
-    case 'masks': {
-      const sel = document.getElementById('maskSelect');
-      data.forEach(m => {
-        const o = document.createElement('option');
-        if (typeof m === 'string') {
-          o.value       = m;
-          o.textContent = m;
-        } else {
-          o.value       = m.id ?? '';
-          o.textContent = m.label ?? m.id ?? '';
+        case 'focusTypes': {
+          const ct = document.getElementById('focusTypeContainer');
+          data.forEach(ft => {
+            const lbl = document.createElement('label');
+            lbl.innerHTML = `
+              <input type="radio" name="focus_type" value="${ft}" required> ${ft}
+            `;
+            ct.appendChild(lbl);
+          });
+          break;
         }
-        sel.appendChild(o);
-      });
-      break;
+        case 'essentia': window.essentiaFoci = data; break;
+        case 'corporea': window.corporeaFoci = data; break;
+        case 'socialdisposition': case 'battledisposition': {
+          const selId = type==='socialdisposition'? 'socialDisp':'battleDisp';
+          const sel   = document.getElementById(selId);
+          sel.innerHTML = '<option value="">– select –</option>';
+          const list = Array.isArray(data)? data : (data.dispositions||[]);
+          list.forEach(d => {
+            const o = document.createElement('option');
+            if (typeof d==='string') {
+              o.value = d; o.textContent = d;
+            } else {
+              o.value = d.id||''; o.textContent = d.label||d.id||'';
+            }
+            sel.appendChild(o);
+          });
+          break;
+        }
+        case 'awakeningstory': {
+          const sel = document.getElementById('awakeningSelect');
+          data.forEach(a=>{ const o=document.createElement('option'); o.value=a.id; o.textContent=a.label; sel.appendChild(o);});
+          break;
+        }
+        case 'saga': {
+          const sel=document.getElementById('sagaSelect');
+          data.forEach(s=>{ const o=document.createElement('option'); o.value=s.id||s; o.textContent=s.label||s; sel.appendChild(o);});
+          break;
+        }
+        case 'corePrinciples': {
+          const sel = document.getElementById('corePrincipleSelect');
+          data.forEach(cp=>{ const o=document.createElement('option'); o.value=cp.id; o.textContent=cp.label; sel.appendChild(o);});
+          break;
+        }
+        case 'masks': {
+          const sel=document.getElementById('maskSelect');
+          data.forEach(m=>{ const o=document.createElement('option'); o.value=m.id||m; o.textContent=m.label||m; sel.appendChild(o);});
+          break;
+        }
+        case 'mainstats': window.pointBuyConfig = data; break;
+        default: console.warn(`No handler for ${type}`);
+      }
     }
 
-    case 'mainstats':
-      window.pointBuyConfig = data;
-      break;
-
-    default:
-      console.warn(`No handler for config type: ${type}`);
-  }
-}
-
-    // 4) Wire focus → specific focus
+    // 4) Focus → specific focus
     document.body.addEventListener('change', e => {
       if (e.target.name==='focus_type') {
         const sel = document.getElementById('focusSelect');
         sel.innerHTML = `<option value="">– select focus –</option>`;
-        const list = e.target.value==='Essentia'
-          ? window.essentiaFoci
-          : window.corporeaFoci;
-        list.forEach(f => {
-          const o = document.createElement('option');
-          o.value = f; o.textContent = f;
-          sel.appendChild(o);
-        });
+        const list = e.target.value==='Essentia'? window.essentiaFoci: window.corporeaFoci;
+        list.forEach(f=>{ const o=document.createElement('option'); o.value=f; o.textContent=f; sel.appendChild(o);});
       }
     });
 
-    // 5) Point‑buy and wizard navigation
+    // 5) Point‑buy wizard
     const max=4, stats={luck:1,speed:1,endurance:1};
-    const rem = ()=> max - (stats.luck + stats.speed + stats.endurance);
-    function upd() {
-      document.getElementById('ptsRemaining').textContent = rem();
-      for (let k in stats) {
-        document.getElementById(k+'Val').textContent = stats[k];
-        document.getElementById('input'+k.charAt(0).toUpperCase()+k.slice(1))
-          .value = stats[k];
-      }
-      document.querySelectorAll('.point-buy button').forEach(b=>{
-        b.disabled = (b.dataset.action==='inc'? rem()===0 : stats[b.dataset.stat]===1);
-      });
-    }
-    document.querySelectorAll('.point-buy button').forEach(b =>
-      b.addEventListener('click', ()=>{
-        const {stat,action} = b.dataset;
-        if (action==='inc' && rem()>0) stats[stat]++;
-        if (action==='dec' && stats[stat]>1) stats[stat]--;
-        upd();
-      })
-    );
-    upd();
+    const rem=()=>max-(stats.luck+stats.speed+stats.endurance);
+    function upd(){ document.getElementById('ptsRemaining').textContent=rem(); for(let k in stats){ document.getElementById(k+'Val').textContent=stats[k]; document.getElementById('input'+k.charAt(0).toUpperCase()+k.slice(1)).value=stats[k]; } document.querySelectorAll('.point-buy button').forEach(b=>{ b.disabled = b.dataset.action==='inc'? rem()===0 : stats[b.dataset.stat]===1; }); }
+    document.querySelectorAll('.point-buy button').forEach(b=>b.addEventListener('click',()=>{ const{stat,action}=b.dataset; if(action==='inc'&&rem()>0)stats[stat]++; if(action==='dec'&&stats[stat]>1)stats[stat]--; upd(); })); upd();
 
-    // 6) Wizard next/back
-    const steps = [...document.querySelectorAll('.step')],
-          bars  = [...document.querySelectorAll('.progress div')],
-          prev  = document.getElementById('prevBtn'),
-          next  = document.getElementById('nextBtn'),
-          form  = document.getElementById('charForm');
-    let idx = 0;
-    function show(i) {
-      steps.forEach((s,j)=> s.classList.toggle('active', j===i));
-      bars.forEach((b,j)=> b.classList.toggle('active', j<=i));
-      prev.disabled = (i===0);
-      next.textContent = (i===steps.length-1 ? 'Forge My Character' : 'Next →');
-    }
-    next.addEventListener('click', ()=>{
-      const inputs = [...steps[idx].querySelectorAll('input,select')];
-      for (let el of inputs) {
-        if (!el.checkValidity()) { el.reportValidity(); return; }
-      }
-      if (idx === steps.length-1) {
-        form.submit();
-      } else {
-        idx++;
-        show(idx);
-      }
-    });
-    prev.addEventListener('click', ()=>{
-      if (idx>0) { idx--; show(idx); }
-    });
+    // 6) Wizard nav
+    const steps=[...document.querySelectorAll('.step')], bars=[...document.querySelectorAll('.progress div')], prev=document.getElementById('prevBtn'), next=document.getElementById('nextBtn'), form=document.getElementById('charForm'); let idx=0;
+    function show(i){ steps.forEach((s,j)=>s.classList.toggle('active',j===i)); bars.forEach((b,j)=>b.classList.toggle('active',j<=i)); prev.disabled=i===0; next.textContent=i===steps.length-1?'Forge My Character':'Next →'; }
+    next.addEventListener('click',()=>{ const inputs=[...steps[idx].querySelectorAll('input,select')]; for(let el of inputs){ if(!el.checkValidity()){ el.reportValidity(); return; }} if(idx===steps.length-1){ form.submit(); } else{ idx++; show(idx);} });
+    prev.addEventListener('click',()=>{ if(idx>0){ idx--; show(idx);} });
     show(0);
   });
   </script>

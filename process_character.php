@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'db.php';    // your PDO $pdo connection
+require 'db.php';
 session_start();
 
 // 1) Must be logged in
@@ -18,7 +18,8 @@ if (empty($_SESSION['user_id'])) {
 $required = [
     'name','race','wellspring','focus_type','focus',
     'social_disposition','battle_disposition','awakening_story',
-    'luck','speed','endurance','saga','mask'
+    'luck','speed','endurance',
+    'saga','core_principle','mask'
 ];
 
 foreach ($required as $field) {
@@ -27,7 +28,7 @@ foreach ($required as $field) {
     }
 }
 
-// sanitize/trim
+// sanitize / cast
 $name               = trim($_POST['name']);
 $race               = trim($_POST['race']);
 $wellspring         = trim($_POST['wellspring']);
@@ -40,9 +41,10 @@ $luck               = (int) $_POST['luck'];
 $speed              = (int) $_POST['speed'];
 $endurance          = (int) $_POST['endurance'];
 $saga               = trim($_POST['saga']);
+$core_principle     = trim($_POST['core_principle']);
 $mask               = trim($_POST['mask']);
 
-// 3) Prevent duplicate character
+// 3) Prevent duplicate
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM characters WHERE user_id = ?");
 $stmt->execute([ $_SESSION['user_id'] ]);
 if ($stmt->fetchColumn() > 0) {
@@ -51,44 +53,65 @@ if ($stmt->fetchColumn() > 0) {
 
 // 4) Insert into DB
 $sql = "
-    INSERT INTO characters (
-      user_id, name, race, wellspring,
-      focus_type, focus,
-      social_disposition, battle_disposition,
-      awakening_story,
-      luck, speed, endurance,
-      saga, mask
-    ) VALUES (
-      :user_id, :name, :race, :wellspring,
-      :focus_type, :focus,
-      :social_disposition, :battle_disposition,
-      :awakening_story,
-      :luck, :speed, :endurance,
-      :saga, :mask
-    )
+INSERT INTO characters (
+    user_id,
+    name, race, wellspring,
+    focus_type, focus,
+    social_disposition, battle_disposition,
+    awakening_story,
+    luck, current_luck,
+    speed,
+    endurance, current_endurance,
+    level,
+    golden_dollars,
+    adventure_tokens_max,
+    adventure_tokens_left,
+    saga, core_principle, mask
+) VALUES (
+    :user_id,
+    :name, :race, :wellspring,
+    :focus_type, :focus,
+    :social_disposition, :battle_disposition,
+    :awakening_story,
+    :luck, :current_luck,
+    :speed,
+    :endurance, :current_endurance,
+    :level,
+    :golden_dollars,
+    :adventure_tokens_max,
+    :adventure_tokens_left,
+    :saga, :core_principle, :mask
+)
 ";
 
 $stmt = $pdo->prepare($sql);
 
 try {
     $stmt->execute([
-        ':user_id'            => $_SESSION['user_id'],
-        ':name'               => $name,
-        ':race'               => $race,
-        ':wellspring'         => $wellspring,
-        ':focus_type'         => $focus_type,
-        ':focus'              => $focus,
-        ':social_disposition' => $social_disposition,
-        ':battle_disposition' => $battle_disposition,
-        ':awakening_story'    => $awakening_story,
-        ':luck'               => $luck,
-        ':speed'              => $speed,
-        ':endurance'          => $endurance,
-        ':saga'               => $saga,
-        ':mask'               => $mask,
+        ':user_id'                => $_SESSION['user_id'],
+        ':name'                   => $name,
+        ':race'                   => $race,
+        ':wellspring'             => $wellspring,
+        ':focus_type'             => $focus_type,
+        ':focus'                  => $focus,
+        ':social_disposition'     => $social_disposition,
+        ':battle_disposition'     => $battle_disposition,
+        ':awakening_story'        => $awakening_story,
+        ':luck'                   => $luck,
+        ':current_luck'           => $luck,
+        ':speed'                  => $speed,
+        ':endurance'              => $endurance,
+        ':current_endurance'      => $endurance,
+        ':level'                  => 1,
+        ':golden_dollars'         => 0,
+        ':adventure_tokens_max'   => 3,
+        ':adventure_tokens_left'  => 3,
+        ':saga'                   => $saga,
+        ':core_principle'         => $core_principle,
+        ':mask'                   => $mask,
     ]);
 } catch (Exception $e) {
-    // In production, log $e->getMessage() instead
+    // In production, log $e->getMessage()
     die("Database error: " . $e->getMessage());
 }
 

@@ -1,0 +1,27 @@
+# Composer dependencies
+/vendor/
+
+# Environment & secret files
+.env
+.env.*.local
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# Logs and caches
+*.log
+cache/
+tmp/
+
+# Backup or swap files
+*~
+*.swp
+*.bak
+
+# SQL dumps
+*.sql
